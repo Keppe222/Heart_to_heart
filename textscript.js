@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const roller = ["Love", "Compassion", "Hope", "Kindness", "Joy"];
+    const roller = ["Love", "Warmth", "Cuddles", "Happiness", "Joy"];
     const container = document.querySelector('.fading-container');
 
     function showRandomText() {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 20000);
 
         // Set a random interval for the next text to appear
-        setTimeout(showRandomText, 10 + Math.random() * 20); // 1-3 seconds
+        setTimeout(showRandomText, 10 + Math.random() * 20);
     }
 
     showRandomText(); // Start the initial text fade
