@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const phrases = ["Love", "Compassion", "Hope", "Kindness", "Joy"];
+    const roller = ["Love", "Compassion", "Hope", "Kindness", "Joy"];
     const container = document.querySelector('.fading-container');
 
     function showRandomText() {
         // Choose a random phrase
-        const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+        const randomPhrase = roller[Math.floor(Math.random() * roller.length)];
         
         // Create a new span element for the random phrase
         const textElement = document.createElement('span');
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove element after animation completes
         setTimeout(() => {
             textElement.remove();
-        }, 2000);
+        }, 20000);
 
         // Set a random interval for the next text to appear
-        setTimeout(showRandomText, 1000 + Math.random() * 2000); // 1-3 seconds
+        setTimeout(showRandomText, 10 + Math.random() * 20); // 1-3 seconds
     }
 
     showRandomText(); // Start the initial text fade
