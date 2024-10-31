@@ -115,3 +115,23 @@ nav ul li a:hover {
         transform: scale(1.5);
     }
 }
+
+.fading-text {
+    position: absolute;
+    top: 20%; /* Adjust as needed */
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgba(255, 105, 105, 0.8);
+    font-size: 2rem;
+}
+
+.fading-text span {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
