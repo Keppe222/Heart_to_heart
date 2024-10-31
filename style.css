@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+header{
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    color: rgb(255, 105, 105);
+    font-family: 'Pixelify Sans';
+    transition: 0.5s ease-in-out;
+}
+
+.heart{
+    width: 300px;
+    height: 300px;
+    background: url('images/heart.png') no-repeat center / contain;
+    animation: pulse 2s ease-in-out infinite;
+    transition: 0.5s ease-in-out;
+    transform-origin: bottom;
+    position: relative;
+}
+
+.heart:hover{
+    width: 400px;
+    height: 400px;
+    background: url('images/heart.png') no-repeat center / contain;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.heart-container {
+    display: flex;
+    gap: 20px; /* Adds space between hearts */
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
