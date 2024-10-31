@@ -111,8 +111,8 @@ nav ul li a:hover {
 /* Volume Control */
 .volume-control {
     position: fixed;
-    top: 2px;
-    right: 20px;
+    bottom: 2px;
+    left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,6 +120,7 @@ nav ul li a:hover {
     z-index: 100;
     padding: 8px;
     border-radius: 8px;
+    background-color: #000000;
 }
 
 .volume-control label {
