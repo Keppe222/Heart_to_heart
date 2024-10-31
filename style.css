@@ -116,22 +116,18 @@ nav ul li a:hover {
     }
 }
 
+.fading-container {
+    position: relative;
+    width: 100%; /* Adjust size as needed */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+
 .fading-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
     position: absolute;
-    top: 20%; /* Adjust as needed */
-    text-align: center;
-    font-family: 'Pixelify Sans', sans-serif;
-    color: rgba(255, 105, 105, 0.8);
-    font-size: 2rem;
-}
-
-.fading-text span {
-    opacity: 0;
-    position: absolute;
-    transition: opacity 1.5s ease-in-out;
-}
-
-@keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    10%, 90% { opacity: 1; }
+    transition: opacity 0.5s ease;
+    pointer-events: none; /* Ensures text doesn't interfere with clicks */
 }
