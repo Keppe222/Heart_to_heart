@@ -111,7 +111,7 @@ nav ul li a:hover {
 /* Volume Control */
 .volume-control {
     position: fixed;
-    bottom: 2px;
+    bottom: 20px;
     left: 20px;
     display: flex;
     flex-direction: column;
