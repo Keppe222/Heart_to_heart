@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const roller = ["Love", "Warmth", "Comfort", "Happiness", "Joy", "Perseverance"];
+    const roller = ["Love", "Warmth", "Comfort", "Happiness", "Joy", "Sweet", "Calm"];
     const container = document.querySelector('.fading-container');
 
     function showRandomText() {

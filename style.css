@@ -43,6 +43,7 @@ header h1 {
     transition: 0.5s ease-in-out;
     transform-origin: bottom;
     position: relative;
+    cursor: pointer;
 }
 
 .heart:hover{
@@ -50,6 +51,7 @@ header h1 {
     height: 400px;
     background: url('images/heart.png') no-repeat center / contain;
     animation: pulse 2.3s ease-in-out infinite;
+    cursor: pointer;
 }
 
 @keyframes pulse {
@@ -89,33 +91,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.click-text {
-    position: absolute;
-    color: rgb(255, 105, 105);
-    font-size: 20px;
-    font-family: 'Pixelify Sans';
-    pointer-events: none;
-    animation: fadeInOut 2s ease forwards;
-}
-
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    20% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.5);
-    }
-}
-
 .fading-container {
     position: relative;
     width: 100%; /* Adjust size as needed */
@@ -133,16 +108,53 @@ nav ul li a:hover {
     pointer-events: none; /* Ensures text doesn't interfere with clicks */
 }
 
+/* Volume Control */
 .volume-control {
     position: fixed;
-    bottom: 20px;
+    top: 2px;
     right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    z-index: 100;
+    padding: 8px;
+    border-radius: 8px;
 }
 
+.volume-control label {
+    color: #fff;
+    font-family: 'Pixelify Sans';
+    font-size: 14px;
+}
+
+#volume-label {
+    color: rgb(255, 105, 105);
+}
+
+/* Volume Slider */
 #volume-slider {
     width: 150px;
+    appearance: none;
+    background-color: #ccc;
+    border-radius: 5px;
+    height: 4px;
 }
+
+#volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 105, 105);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 105, 105);
+    border-radius: 50%;
+    cursor: pointer;
+}
+

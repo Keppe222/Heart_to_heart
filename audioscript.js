@@ -3,20 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeSlider = document.getElementById('volume-slider');
     const volumeLabel = document.getElementById('volume-label');
 
-    // Ensure audio starts muted
+    // Initialize audio settings
     audio.volume = 0;
     audio.muted = true;
 
-    // Start playing audio automatically (some browsers may require user interaction)
-    audio.play().catch(error => {
-        console.log("Autoplay was prevented. User interaction is required to play audio.");
-    });
+    // Play audio after user interaction (e.g., click)
+    document.body.addEventListener('click', () => {
+        audio.play();
+    }, { once: true }); // Only trigger this once
 
-    // Update volume when slider value changes
+    // Update volume when the slider changes
     volumeSlider.addEventListener('input', () => {
-        const volume = volumeSlider.value / 100;
+        const volume = volumeSlider.value / 100; // Convert slider value to 0 - 1 for audio volume
         audio.volume = volume;
-        audio.muted = volume === 0; // Mute if volume is at 0
-        volumeLabel.textContent = `${volumeSlider.value}%`; // Update label
+        
+        // Unmute the audio if volume is above 0, otherwise mute it
+        audio.muted = volume === 0;
+
+        // Update the label to show the percentage
+        volumeLabel.textContent = `${volumeSlider.value}%`;
     });
 });
