@@ -39,7 +39,7 @@ header h1 {
     width: 300px;
     height: 300px;
     background: url('images/heart.png') no-repeat center / contain;
-    animation: pulse 2.5s ease-in-out infinite;
+    animation: pulse 2.3s ease-in-out infinite;
     transition: 0.5s ease-in-out;
     transform-origin: bottom;
     position: relative;
@@ -49,7 +49,7 @@ header h1 {
     width: 400px;
     height: 400px;
     background: url('images/heart.png') no-repeat center / contain;
-    animation: pulse 2.5s ease-in-out infinite;
+    animation: pulse 2.3s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -57,7 +57,7 @@ header h1 {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.08);
     }
 }
 
