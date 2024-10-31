@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         textElement.textContent = randomPhrase;
 
         // Position the element at the click location
+        textElement.style.position = 'absolute';
         textElement.style.left = `${e.pageX}px`;
         textElement.style.top = `${e.pageY}px`;
+        textElement.style.transform = 'translate(-50%, -50%)';
 
         // Append the element to the body
         document.body.appendChild(textElement);
