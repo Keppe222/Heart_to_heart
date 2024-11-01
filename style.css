@@ -111,8 +111,8 @@ nav ul li a:hover {
 /* Volume Control */
 .volume-control {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    top: 18px;
+    left: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,8 +161,8 @@ nav ul li a:hover {
 
 .sound-control {
     position: fixed;
-    top: 50px;
-    right: 20px;
+    top: 5px;
+    left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,7 +170,7 @@ nav ul li a:hover {
     z-index: 100;
     padding: 8px;
     border-radius: 8px;
-    color: white;
+    color: rgb(255, 105, 105);
     font-family: 'Pixelify Sans';
 }
 
@@ -180,8 +180,8 @@ nav ul li a:hover {
 }
 
 #sound-select {
-    background-color: #333;
-    color: white;
+    background-color: rgb(255, 105, 105);
+    color: black;
     border: none;
     padding: 5px;
     font-size: 14px;
