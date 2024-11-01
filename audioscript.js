@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('background-audio');
     const volumeSlider = document.getElementById('volume-slider');
     const volumeLabel = document.getElementById('volume-label');
+    const soundSelect = document.getElementById('sound-select');
 
     // Initialize audio settings
     audio.volume = 0;
@@ -22,5 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update the label to show the percentage
         volumeLabel.textContent = `${volumeSlider.value}%`;
+    });
+
+    soundSelect.addEventListener('change', (event) => {
+        const selectedSound = event.target.value; // Get the selected file path
+        audio.src = selectedSound; // Set the new audio source
+        audio.play(); // Play the new sound immediately
     });
 });
