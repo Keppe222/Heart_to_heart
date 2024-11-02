@@ -197,3 +197,31 @@ nav ul li a:hover {
     font-size: 14px;
     border-radius: 5px;
 }
+
+.about {
+    font-family: 'Pixelify Sans';
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about h3{
+    color: rgb(255, 105, 105);
+    margin-top: 0;
+}
+
+.aboutlink a{
+    background-color: black;
+    text-decoration: none;
+    color: rgb(255, 105, 105);
+    padding:5px;
+}
+
+.aboutlink a:hover{
+    text-decoration: underline;
+}
